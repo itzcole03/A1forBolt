@@ -1,0 +1,18 @@
+
+.progress-bar {
+  background: #e5e7eb;
+  border-radius: 9999px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+  background: linear-gradient(90deg, #34d399 0%, #3b82f6 100%);
+  width: var(--progress-width, 0%);
+}
+.success { background: #34d399; }
+.danger { background: #ef4444; }
+.pending { background: #a1a1aa; }

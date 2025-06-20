@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A1Betting - Offline</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+          "Ubuntu", "Cantarell", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .offline-container {
+        max-width: 600px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .offline-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 30px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        opacity: 0.9;
+        line-height: 1.5;
+      }
+
+      .offline-features {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: left;
+      }
+
+      .feature-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        transition: transform 0.2s ease;
+      }
+
+      .feature-item:hover {
+        transform: translateX(5px);
+      }
+
+      .feature-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+
+      .button-group {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 140px;
+        justify-content: center;
+      }
+
+      .btn-primary {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-primary:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .status-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+
+      .status-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ff4444;
+        animation: blink 1.5s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        50% {
+          opacity: 1;
+        }
+        51%,
+        100% {
+          opacity: 0.3;
+        }
+      }
+
+      .cached-data {
+        margin-top: 30px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+      }
+
+      .data-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .data-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .data-value {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .data-label {
+        font-size: 0.9em;
+        opacity: 0.8;
+      }
+
+      @media (max-width: 768px) {
+        .offline-container {
+          padding: 30px 20px;
+          margin: 20px;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        .button-group {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .data-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="offline-container">
+      <div class="offline-icon">📶</div>
+
+      <h1>You're Offline</h1>
+      <p class="subtitle">
+        No internet connection detected. Don't worry - A1Betting works offline
+        too!
+      </p>
+
+      <div class="offline-features">
+        <h3 style="margin-bottom: 20px; text-align: center">
+          Available Offline Features
+        </h3>
+        <ul class="feature-list">
+          <li class="feature-item">
+            <span class="feature-icon">📊</span>
+            <span>View cached analytics and performance data</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">💼</span>
+            <span>Check your portfolio and positions</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">🧠</span>
+            <span>Review ML model insights and predictions</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">📈</span>
+            <span>Analyze historical trading data</span>
+          </li>
+          <li class="feature-item">
+            <span class="feature-icon">⚙️</span>
+            <span>Access settings and preferences</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cached-data">
+        <h3 style="text-align: center; margin-bottom: 15px">
+          Cached Data Summary
+        </h3>
+        <div class="data-grid">
+          <div class="data-card">
+            <div class="data-value" id="cachedOpportunities">12</div>
+            <div class="data-label">Opportunities</div>
+          </div>
+          <div class="data-card">
+            <div class="data-value" id="cachedPredictions">8</div>
+            <div class="data-label">Predictions</div>
+          </div>
+          <div class="data-card">
+            <div class="data-value" id="lastSync">2h ago</div>
+            <div class="data-label">Last Sync</div>
+          </div>
+          <div class="data-card">
+            <div class="data-value" id="cacheSize">4.2 MB</div>
+            <div class="data-label">Cache Size</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <a href="/" class="btn btn-primary" onclick="retryConnection()">
+          🔄 Retry Connection
+        </a>
+        <a href="/dashboard" class="btn btn-secondary">
+          📊 View Offline Dashboard
+        </a>
+      </div>
+
+      <div class="status-indicator">
+        <div class="status-dot"></div>
+        <span>Checking connection...</span>
+      </div>
+    </div>
+
+    <script>
+      // Check connection status
+      function updateConnectionStatus() {
+        const statusIndicator = document.querySelector(
+          ".status-indicator span",
+        );
+        const statusDot = document.querySelector(".status-dot");
+
+        if (navigator.onLine) {
+          statusIndicator.textContent = "Connection restored! Redirecting...";
+          statusDot.style.background = "#44ff44";
+          statusDot.style.animation = "none";
+
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 2000);
+        } else {
+          statusIndicator.textContent =
+            "Still offline - monitoring connection...";
+        }
+      }
+
+      function retryConnection() {
+        updateConnectionStatus();
+        if (navigator.onLine) {
+          window.location.href = "/";
+        } else {
+          const statusIndicator = document.querySelector(
+            ".status-indicator span",
+          );
+          statusIndicator.textContent =
+            "Still no connection. Please check your network.";
+
+          setTimeout(() => {
+            statusIndicator.textContent = "Checking connection...";
+          }, 3000);
+        }
+      }
+
+      // Load cached data summary
+      function loadCachedDataSummary() {
+        // Try to get data from localStorage or IndexedDB
+        const cachedData = localStorage.getItem("a1betting-offline-summary");
+
+        if (cachedData) {
+          try {
+            const data = JSON.parse(cachedData);
+            document.getElementById("cachedOpportunities").textContent =
+              data.opportunities || "0";
+            document.getElementById("cachedPredictions").textContent =
+              data.predictions || "0";
+            document.getElementById("lastSync").textContent =
+              data.lastSync || "Unknown";
+            document.getElementById("cacheSize").textContent =
+              data.cacheSize || "Unknown";
+          } catch (e) {
+            console.log("Error loading cached data summary:", e);
+          }
+        }
+      }
+
+      // Event listeners
+      window.addEventListener("online", updateConnectionStatus);
+      window.addEventListener("offline", updateConnectionStatus);
+
+      // Initial setup
+      document.addEventListener("DOMContentLoaded", () => {
+        updateConnectionStatus();
+        loadCachedDataSummary();
+
+        // Check connection every 5 seconds
+        setInterval(updateConnectionStatus, 5000);
+      });
+
+      // Save current page for when connection returns
+      if (document.referrer && !document.referrer.includes("offline.html")) {
+        sessionStorage.setItem("a1betting-return-url", document.referrer);
+      }
+
+      // Service worker communication
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.addEventListener("message", (event) => {
+          if (event.data.type === "CACHE_UPDATED") {
+            loadCachedDataSummary();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

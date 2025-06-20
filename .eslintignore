@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Archives and legacy files
+src/__archive/
+_legacy_tests/
+
+# Generated files
+coverage/
+*.log
+*.tsbuildinfo
+
+# Config files that may have different syntax
+*.config.js
+*.config.mjs
+*.config.cjs
+babel.config.*
+jest.config.*
+
+# Temporary files
+*.tmp
+*.temp

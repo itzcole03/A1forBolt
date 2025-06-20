@@ -1,0 +1,16 @@
+{
+  "apiKey": "ae2109aa857549f9980d4843e58092ef",
+  "models": [
+    {
+      "name": "page",
+      "type": "page",
+      "urlPath": "/*"
+    },
+    {
+      "name": "section",
+      "type": "section" 
+    }
+  ],  "preview": {
+    "host": "http://localhost:5173"
+  }
+}

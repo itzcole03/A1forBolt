@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PredictionSummaryCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-expanded="false"
+    aria-label="Prediction details for Alpha1-ML. medium risk level."
+    class="w-full max-w-xl mx-auto transition-all duration-300  "
+    data-testid="prediction-summary-card"
+    tabindex="-1"
+  >
+    <div
+      class="glass-morphism rounded-2xl shadow-lg p-6 relative overflow-hidden"
+    >
+      <div
+        aria-atomic="true"
+        aria-live="polite"
+        class="relative z-10 p-6"
+      >
+        <div
+          class="flex items-center justify-between mb-4"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <h3
+              class="text-lg font-semibold text-primary-600 tracking-wide"
+            >
+              Alpha1-ML
+            </h3>
+            <div
+              class="relative inline-block"
+            >
+              <div
+                class="inline-flex items-center justify-center"
+              >
+                <svg
+                  class="inline-block"
+                  fill="none"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                  />
+                  <line
+                    x1="12"
+                    x2="12"
+                    y1="16"
+                    y2="12"
+                  />
+                  <line
+                    x1="12"
+                    x2="12.01"
+                    y1="8"
+                    y2="8"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-label="Risk level: medium"
+            class="text-xs px-2 py-1 rounded-full bg-yellow-500/20 text-yellow-400"
+          >
+            <span
+              aria-hidden="true"
+            >
+              MEDIUM RISK
+            </span>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-2 gap-4 w-full text-center"
+        >
+          <div
+            class="bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors"
+          >
+            <div
+              class="flex items-center justify-center space-x-1 text-xs text-gray-400"
+            >
+              <span
+                class="sr-only"
+              >
+                Accuracy:
+              </span>
+              <span
+                aria-hidden="true"
+              >
+                Accuracy
+              </span>
+              <div
+                class="relative inline-block"
+              >
+                <div
+                  class="inline-flex items-center justify-center"
+                >
+                  <svg
+                    class="inline-block"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <line
+                      x1="12"
+                      x2="12"
+                      y1="16"
+                      y2="12"
+                    />
+                    <line
+                      x1="12"
+                      x2="12.01"
+                      y1="8"
+                      y2="8"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-2xl font-bold text-primary-500 mt-1"
+            >
+              85.2%
+            </div>
+          </div>
+          <div
+            class="bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors"
+          >
+            <div
+              class="flex items-center justify-center space-x-1 text-xs text-gray-400"
+            >
+              <span
+                class="sr-only"
+              >
+                Payout:
+              </span>
+              <span
+                aria-hidden="true"
+              >
+                Payout
+              </span>
+              <div
+                class="relative inline-block"
+              >
+                <div
+                  class="inline-flex items-center justify-center"
+                >
+                  <svg
+                    class="inline-block"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <line
+                      x1="12"
+                      x2="12"
+                      y1="16"
+                      y2="12"
+                    />
+                    <line
+                      x1="12"
+                      x2="12.01"
+                      y1="8"
+                      y2="8"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-2xl font-bold text-green-500 mt-1"
+            >
+              2.50x
+            </div>
+          </div>
+          <div
+            class="bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors"
+          >
+            <div
+              class="flex items-center justify-center space-x-1 text-xs text-gray-400"
+            >
+              <span
+                class="sr-only"
+              >
+                Kelly Criterion:
+              </span>
+              <span
+                aria-hidden="true"
+              >
+                Kelly
+              </span>
+              <div
+                class="relative inline-block"
+              >
+                <div
+                  class="inline-flex items-center justify-center"
+                >
+                  <svg
+                    class="inline-block"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <line
+                      x1="12"
+                      x2="12"
+                      y1="16"
+                      y2="12"
+                    />
+                    <line
+                      x1="12"
+                      x2="12.01"
+                      y1="8"
+                      y2="8"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-2xl font-bold text-yellow-400"
+            >
+              0.45
+            </div>
+          </div>
+          <div
+            class="bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors"
+          >
+            <div
+              class="flex items-center justify-center space-x-1 text-xs text-gray-400"
+            >
+              <span
+                class="sr-only"
+              >
+                Market Edge:
+              </span>
+              <span
+                aria-hidden="true"
+              >
+                Market Edge
+              </span>
+              <div
+                class="relative inline-block"
+              >
+                <div
+                  class="inline-flex items-center justify-center"
+                >
+                  <svg
+                    class="inline-block"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                    />
+                    <line
+                      x1="12"
+                      x2="12"
+                      y1="16"
+                      y2="12"
+                    />
+                    <line
+                      x1="12"
+                      x2="12.01"
+                      y1="8"
+                      y2="8"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-2xl font-bold text-green-500"
+            >
+              +3.20%
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-4 grid grid-cols-2 gap-4"
+        >
+          <div
+            class="bg-white/5 rounded-lg p-3"
+          >
+            <div
+              class="flex items-center justify-between"
+            >
+              <span
+                class="text-xs text-gray-400"
+              >
+                Data Quality
+              </span>
+              <span
+                class="font-semibold text-purple-400"
+              >
+                92%
+              </span>
+            </div>
+            <div
+              class="w-full bg-gray-700 rounded-full h-1.5 mt-2"
+            >
+              <div
+                class="bg-purple-500 h-1.5 rounded-full"
+                style="width: 92%;"
+              />
+            </div>
+          </div>
+          <div
+            class="bg-white/5 rounded-lg p-3"
+          >
+            <div
+              class="flex items-center justify-between"
+            >
+              <span
+                class="text-xs text-gray-400"
+              >
+                Confidence
+              </span>
+              <span
+                class="font-semibold text-pink-400"
+              >
+                88%
+              </span>
+            </div>
+            <div
+              class="w-full bg-gray-700 rounded-full h-1.5 mt-2"
+            >
+              <div
+                class="bg-pink-500 h-1.5 rounded-full"
+                style="width: 88%;"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          aria-live="polite"
+          class="mt-6 pt-4 border-t border-white/10"
+        >
+          <div
+            class="flex justify-between items-center mb-2"
+          >
+            <span
+              class="text-xs text-gray-400"
+            >
+              Updated: Jun 8, 11:45 PM
+            </span>
+            <div
+              aria-label="Card actions"
+              class="flex space-x-2"
+              role="group"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

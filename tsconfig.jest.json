@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "types": [
+      "jest",
+      "node"
+    ],
+    "verbatimModuleSyntax": false,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "isolatedModules": true
+  },
+  "include": [
+    "src",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
+}

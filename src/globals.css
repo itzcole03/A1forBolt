@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 14 165 233;
+    --color-secondary: 99 102 241;
+    --color-success: 34 197 94;
+    --color-warning: 234 179 8;
+    --color-danger: 239 68 68;
+    --color-info: 59 130 246;
+  }
+
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .modern-card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-glass backdrop-blur-sm border border-gray-200 dark:border-gray-700;
+  }
+
+  .glass {
+    @apply bg-glass-light dark:bg-glass-dark backdrop-blur-sm;
+  }
+
+  .modern-button {
+    @apply px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200;
+  }
+
+  .modern-input {
+    @apply w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .modern-select {
+    @apply w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary-500 to-primary-700;
+  }
+
+  .gradient-success {
+    @apply bg-gradient-to-br from-green-500 to-green-700;
+  }
+
+  .gradient-danger {
+    @apply bg-gradient-to-br from-red-500 to-red-700;
+  }
+
+  .status-badge {
+    @apply px-2 py-1 text-xs font-medium rounded-full;
+  }
+
+  .info-btn {
+    @apply hover:opacity-80 transition-opacity duration-200;
+  }
+
+  .premium-input-container {
+    @apply relative;
+  }
+
+  .premium-input {
+    @apply w-full pl-8 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:ring-2 focus:ring-white/30 focus:border-transparent;
+  }
+
+  .currency-symbol {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 text-white/70;
+  }
+} 

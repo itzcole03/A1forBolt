@@ -1,0 +1,397 @@
+/* ===== PREMIUM COMPONENT LIBRARY ===== */
+
+@layer components {
+  /* === CARDS & CONTAINERS === */
+
+  .premium-card {
+    @apply bg-white/95 backdrop-blur-xl border border-white/20 rounded-3xl shadow-xl transition-all duration-300 ease-out overflow-hidden relative;
+  }
+
+  .premium-card:hover {
+    @apply transform -translate-y-2 shadow-2xl border-brand-500/30;
+  }
+
+  .premium-card.dark {
+    @apply bg-gray-900/95 border-gray-800/50;
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-glass transition-all duration-300 ease-out;
+  }
+
+  .glass-card:hover {
+    @apply bg-white/20 border-white/30 transform translate-y-[-2px];
+  }
+
+  .neumorphic-card {
+    @apply bg-gray-100 rounded-3xl transition-all duration-300 ease-out;
+    box-shadow:
+      20px 20px 60px #d9d9d9,
+      -20px -20px 60px #ffffff;
+  }
+
+  .neumorphic-card:hover {
+    box-shadow:
+      inset 20px 20px 60px #d9d9d9,
+      inset -20px -20px 60px #ffffff;
+  }
+
+  .gradient-card {
+    @apply bg-gradient-to-br from-brand-500/10 via-brand-600/5 to-brand-700/10 backdrop-blur-xl border border-brand-500/20 rounded-3xl shadow-brandShadow transition-all duration-300 ease-out;
+  }
+
+  .prop-card {
+    @apply premium-card p-6 cursor-pointer select-none;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.7) 100%
+    );
+  }
+
+  .prop-card.selected {
+    @apply border-2 border-brand-500 shadow-brandShadow bg-gradient-to-br from-brand-50 to-brand-100;
+  }
+
+  .prop-card.over {
+    @apply border-l-4 border-l-success-500;
+  }
+
+  .prop-card.under {
+    @apply border-l-4 border-l-error-500;
+  }
+
+  /* === BUTTONS === */
+
+  .btn-premium {
+    @apply px-8 py-4 bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-2xl shadow-brandShadow transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-xl active:scale-95;
+  }
+
+  .btn-premium:hover {
+    @apply from-brand-600 to-brand-700;
+  }
+
+  .btn-glass {
+    @apply px-6 py-3 bg-white/20 backdrop-blur-lg border border-white/30 text-white font-medium rounded-xl shadow-glass transition-all duration-300 ease-out hover:bg-white/30 hover:border-white/40;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 bg-transparent border-2 border-brand-500 text-brand-500 font-semibold rounded-xl transition-all duration-300 ease-out hover:bg-brand-500 hover:text-white hover:shadow-brandShadow;
+  }
+
+  .btn-success {
+    @apply px-6 py-3 bg-gradient-to-r from-success-500 to-success-600 text-white font-semibold rounded-xl shadow-successShadow transition-all duration-300 ease-out hover:from-success-600 hover:to-success-700;
+  }
+
+  .btn-error {
+    @apply px-6 py-3 bg-gradient-to-r from-error-500 to-error-600 text-white font-semibold rounded-xl shadow-errorShadow transition-all duration-300 ease-out hover:from-error-600 hover:to-error-700;
+  }
+
+  /* === INPUTS === */
+
+  .input-premium {
+    @apply w-full px-6 py-4 bg-white/90 backdrop-blur-lg border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-500 transition-all duration-300 ease-out focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20 focus:bg-white;
+  }
+
+  .input-glass {
+    @apply w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-white/60 transition-all duration-300 ease-out focus:outline-none focus:border-white/40 focus:bg-white/20;
+  }
+
+  /* === BADGES & INDICATORS === */
+
+  .badge-premium {
+    @apply inline-flex items-center px-3 py-1 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-sm font-medium rounded-full shadow-sm;
+  }
+
+  .badge-success {
+    @apply inline-flex items-center px-3 py-1 bg-gradient-to-r from-success-500 to-success-600 text-white text-sm font-medium rounded-full shadow-sm;
+  }
+
+  .badge-error {
+    @apply inline-flex items-center px-3 py-1 bg-gradient-to-r from-error-500 to-error-600 text-white text-sm font-medium rounded-full shadow-sm;
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center px-3 py-1 bg-gradient-to-r from-warning-500 to-warning-600 text-white text-sm font-medium rounded-full shadow-sm;
+  }
+
+  .badge-glass {
+    @apply inline-flex items-center px-3 py-1 bg-white/20 backdrop-blur-lg border border-white/30 text-white text-sm font-medium rounded-full;
+  }
+
+  /* === NAVIGATION === */
+
+  .nav-premium {
+    @apply bg-white/95 backdrop-blur-xl border-b border-gray-200/50 shadow-lg;
+  }
+
+  .nav-glass {
+    @apply bg-white/10 backdrop-blur-xl border-b border-white/20;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 text-gray-600 font-medium rounded-xl transition-all duration-300 ease-out hover:text-brand-500 hover:bg-brand-50;
+  }
+
+  .nav-link.active {
+    @apply text-brand-500 bg-brand-50 shadow-sm;
+  }
+
+  /* === MODALS & OVERLAYS === */
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+  }
+
+  .modal-content {
+    @apply bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden;
+  }
+
+  .modal-glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-glass;
+  }
+
+  /* === PROGRESS & LOADING === */
+
+  .progress-premium {
+    @apply w-full h-3 bg-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-bar {
+    @apply h-full bg-gradient-to-r from-brand-500 to-brand-600 rounded-full transition-all duration-500 ease-out;
+  }
+
+  .progress-success {
+    @apply bg-gradient-to-r from-success-500 to-success-600;
+  }
+
+  .progress-error {
+    @apply bg-gradient-to-r from-error-500 to-error-600;
+  }
+
+  .loading-spinner {
+    @apply w-8 h-8 border-4 border-gray-200 border-t-brand-500 rounded-full animate-spin;
+  }
+
+  .loading-dots {
+    @apply flex space-x-1;
+  }
+
+  .loading-dot {
+    @apply w-2 h-2 bg-brand-500 rounded-full animate-pulse;
+  }
+
+  /* === TABLES === */
+
+  .table-premium {
+    @apply w-full border-collapse bg-white/95 backdrop-blur-xl rounded-2xl overflow-hidden shadow-xl;
+  }
+
+  .table-premium th {
+    @apply px-6 py-4 bg-gray-50/80 text-left text-sm font-semibold text-gray-900 border-b border-gray-200/50;
+  }
+
+  .table-premium td {
+    @apply px-6 py-4 text-sm text-gray-700 border-b border-gray-200/30 transition-colors duration-200;
+  }
+
+  .table-premium tr:hover td {
+    @apply bg-brand-50/50;
+  }
+
+  /* === SPECIAL EFFECTS === */
+
+  .glow-brand {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+  }
+
+  .glow-success {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+
+  .glow-error {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-success {
+    @apply bg-gradient-to-r from-success-500 to-success-700 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-error {
+    @apply bg-gradient-to-r from-error-500 to-error-700 bg-clip-text text-transparent;
+  }
+
+  /* === BETTING SPECIFIC === */
+
+  .odds-display {
+    @apply text-2xl font-bold text-gray-900 tabular-nums;
+  }
+
+  .odds-positive {
+    @apply text-success-600;
+  }
+
+  .odds-negative {
+    @apply text-error-600;
+  }
+
+  .stake-input {
+    @apply text-center text-2xl font-bold bg-transparent border-none outline-none text-brand-600 placeholder-gray-400;
+  }
+
+  .payout-display {
+    @apply text-lg font-semibold text-gray-700 tabular-nums;
+  }
+
+  .confidence-bar {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+
+  .confidence-fill {
+    @apply h-full rounded-full transition-all duration-500 ease-out;
+  }
+
+  .confidence-high {
+    @apply bg-gradient-to-r from-success-400 to-success-600;
+  }
+
+  .confidence-medium {
+    @apply bg-gradient-to-r from-warning-400 to-warning-600;
+  }
+
+  .confidence-low {
+    @apply bg-gradient-to-r from-error-400 to-error-600;
+  }
+
+  /* === RESPONSIVE ADJUSTMENTS === */
+
+  @media (max-width: 768px) {
+    .premium-card {
+      @apply rounded-2xl p-4;
+    }
+
+    .btn-premium {
+      @apply px-6 py-3 text-sm;
+    }
+
+    .input-premium {
+      @apply px-4 py-3;
+    }
+  }
+}
+
+/* ===== CUSTOM ANIMATIONS ===== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.5);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.4s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+
+@media (prefers-color-scheme: dark) {
+  .premium-card {
+    @apply bg-gray-900/95 border-gray-800/50 text-white;
+  }
+
+  .input-premium {
+    @apply bg-gray-800/90 border-gray-700 text-white placeholder-gray-400;
+  }
+
+  .nav-premium {
+    @apply bg-gray-900/95 border-gray-800/50;
+  }
+
+  .nav-link {
+    @apply text-gray-300 hover:text-brand-400 hover:bg-brand-900/20;
+  }
+
+  .table-premium {
+    @apply bg-gray-900/95;
+  }
+
+  .table-premium th {
+    @apply bg-gray-800/80 text-gray-100;
+  }
+
+  .table-premium td {
+    @apply text-gray-300;
+  }
+
+  .table-premium tr:hover td {
+    @apply bg-brand-900/20;
+  }
+}
